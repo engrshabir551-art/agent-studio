@@ -1,0 +1,9 @@
+{
+  "appId": "com.agentstudio.app",
+  "appName": "Agent Studio",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "http",
+    "cleartext": true
+  }
+}

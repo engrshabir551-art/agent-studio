@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="theme-color" content="#0b1020">
+<title>Agent Studio</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <div class="brand"><span class="logo">◈</span><h1>Agent Studio</h1></div>
+    <nav id="nav"></nav>
+    <div class="side-foot muted small">56 agents · 3 systems<br>Open source · works offline</div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <div class="mainwrap">
+    <header class="topbar">
+      <button id="menuBtn" class="iconbtn" aria-label="Menu">☰</button>
+      <div class="title" id="viewTitle"></div>
+      <span id="netChip" class="netchip on">Online</span>
+      <button id="providerBadge" class="badge" data-go="settings" title="Change provider"></button>
+    </header>
+    <div id="offlineBanner" class="banner" hidden>You are offline. Dashboards, vault, tasks, memory and history keep working. Cloud AI providers need internet; use Ollama on your local network to run agents offline.</div>
+    <main id="main"></main>
+    <nav class="tabbar" id="tabbar"></nav>
+  </div>
+</div>
+
+<div id="lock" class="lock" hidden>
+  <form id="lockForm" class="card lockbox">
+    <div class="logo big">◈</div><h2>Agent Studio is locked</h2>
+    <input id="lockPin" type="password" autocomplete="off" placeholder="Enter PIN">
+    <button class="btn primary" type="submit">Unlock</button>
+    <div id="lockMsg" class="err"></div>
+  </form>
+</div>
+
+<dialog id="formDialog">
+  <form id="formEl">
+    <h3 id="formTitle"></h3>
+    <div id="formBody" class="formbody"></div>
+    <div class="row end"><button id="formCancel" class="btn" type="button">Cancel</button><button id="formSubmit" class="btn primary" type="submit">Save</button></div>
+  </form>
+</dialog>
+
+<div id="toast" role="status"></div>
+
+<script src="js/util.js"></script>
+<script src="js/defaults.js"></script>
+<script src="js/specs.js"></script>
+<script src="js/providers.js"></script>
+<script src="js/store.js"></script>
+<script src="js/core.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/finance.js"></script>
+<script src="js/runview.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/views-dashboard.js"></script>
+<script src="js/views-orchestra.js"></script>
+<script src="js/views-chat.js"></script>
+<script src="js/views-teams.js"></script>
+<script src="js/views-tasks.js"></script>
+<script src="js/views-memory.js"></script>
+<script src="js/views-comms.js"></script>
+<script src="js/views-runtime.js"></script>
+<script src="js/views-vault.js"></script>
+<script src="js/views-agents.js"></script>
+<script src="js/views-security.js"></script>
+<script src="js/views-history.js"></script>
+<script src="js/views-settings.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
